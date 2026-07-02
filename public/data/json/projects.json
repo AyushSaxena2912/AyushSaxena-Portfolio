@@ -1,0 +1,38 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "favorite": true,
+      "name": "ClipMantra",
+      "banner": "",
+      "icon": "/data/icons/project_default.svg",
+      "duration": "Feb 2025 - Mar 2025",
+      "description": "AI-Powered Long-Form Video to Viral Clips Automation Platform. Engineered an AI-powered platform that converts long-form videos into viral-ready short clips.",
+      "features": [
+        "Orchestrated an async media pipeline using Node.js, Redis, PostgreSQL, yt-dlp for video acquisition, FFmpeg for clip processing, and Faster-Whisper for transcription, with real-time processing updates.",
+        "Configured JWT + Google OAuth authentication, Redis-based rate limiting, and secure user-level data isolation.",
+        "Streamlined scalable cloud storage workflows using AWS S3 and Cloudflare R2 with automated media cleanup."
+      ],
+      "techStack": "https://skillicons.dev/icons?i=nodejs,redis,postgres,aws,cloudflare",
+      "deployment": "",
+      "repository": "https://github.com/"
+    },
+    {
+      "id": 2,
+      "favorite": true,
+      "name": "Notes-Era",
+      "banner": "",
+      "icon": "/data/images/graphic_notesera_logo.png",
+      "duration": "Jan 2023 - Jun 2024",
+      "description": "Premium Engineering Notes Platform. Spearheaded end-to-end UI/UX in Figma and backend development using Node.js (TypeScript) and MongoDB, serving 5,000+ students.",
+      "features": [
+        "Integrated secure Google Authentication, JWT-based authorization, and Razorpay payment gateway workflows.",
+        "Automated post-payment note delivery using the Google Drive API, enabling instant access to 4,000+ note modules.",
+        "Leveraged Google Analytics to track 200,000+ user events and support platform growth to 1,000+ monthly active users."
+      ],
+      "techStack": "https://skillicons.dev/icons?i=nodejs,ts,mongodb,figma",
+      "deployment": "",
+      "repository": "https://github.com/"
+    }
+  ]
+}

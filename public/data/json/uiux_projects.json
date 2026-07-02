@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "favorite": true,
+      "name": "Ghumakad App",
+      "image": "/data/images/ghumakad_mockup.jpg",
+      "description": "Ghumakad is a modern, high-fidelity travel planner mobile app design. Engineered with a premium blue-accent theme in Figma, it features self-planning toggles, interactive destination itineraries, and localized emergency/travel utility cards.",
+      "link": "https://www.figma.com/",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "favorite": true,
+      "name": "Lil' Legends",
+      "image": "/data/images/lillegends_mockup.png",
+      "description": "Lil' Legends is a vibrant web interface designed for a modern preschool and academy. Crafted in Figma with warm color themes, it showcases interactive courses, admission alerts, academy facilities, and an inquiry system.",
+      "link": "https://www.figma.com/",
+      "color": "pink"
+    },
+    {
+      "id": 3,
+      "favorite": true,
+      "name": "For You Association",
+      "image": "/data/images/foryou_mockup.png",
+      "description": "For You Association is a clean, modern web design for a non-profit NGO. Designed in Figma with a reliable blue palette, it organizes mission profiles, volunteer call-to-actions, and streamlined partner/donation workflows.",
+      "link": "https://www.figma.com/",
+      "color": "blue"
+    },
+    {
+      "id": 4,
+      "favorite": true,
+      "name": "PrinTooo App",
+      "image": "/data/images/printooo_mockup.jpg",
+      "description": "PrinTooo is a specialized printout delivery mobile application design. Created in Figma with clean visual hierarchies, it streamlines document uploads, custom print settings, delivery slot scheduling, and checkout billing workflows.",
+      "link": "https://www.figma.com/",
+      "color": "blue"
+    },
+    {
+      "id": 5,
+      "favorite": true,
+      "name": "Homie's Kitchen",
+      "image": "/data/images/homies_kitchen_mockup.jpg",
+      "description": "Homie's Kitchen is a premium meal and tiffin delivery mobile app design. Engineered in Figma with a warm purple aesthetic, it features convenient tiffin subscription plans, day-wise menu selections, college-gate delivery slot choices, and automated checkout.",
+      "link": "https://www.figma.com/",
+      "color": "purple"
+    },
+    {
+      "id": 6,
+      "favorite": true,
+      "name": "EcoClean",
+      "image": "/data/images/ecoclean_mockup.jpg",
+      "description": "EcoClean is a smart and eco-friendly waste management platform designed to simplify junk disposal and recycling. Crafted in Figma with a clean green aesthetic, it features streamlined pickup scheduling, real-time transaction tracking, and interactive dashboard layouts.",
+      "link": "https://www.figma.com/",
+      "color": "green"
+    }
+  ]
+}

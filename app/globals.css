@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Common Classes */
+* {
+  @apply font-roboto tracking-wide text-theme-black;
+}
+
+.container {
+  @apply mt-24 mb-16 md:mt-[9rem] mx-auto max-w-[850px] px-[4%];
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.avatar {
+  @apply bg-theme-purple;
+}
+
+.navbar {
+  @apply h-[70px] z-20 w-full fixed top-0 flex-between md:px-16 px-2 navbar_glass;
+}
+.footer {
+  @apply w-full shadow-xl flex flex-col-reverse md:flex-row gap-4 items-center justify-between md:px-16 px-2 py-4 border-t;
+}
+
+.navbar_glass {
+  @apply bg-theme-white shadow-sm bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-[5px];
+}
+
+.navbar_link {
+  @apply hover:scale-105 underline ease-in duration-200;
+}
+
+.dropdown_menu {
+  @apply absolute right-0 top-full shadow-sm mt-4 w-full p-5 rounded-xl bg-theme-white border min-w-[180px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm text-theme-black font-medium underline;
+}
+
+.hero_social_icon {
+  @apply fill-theme-black hover:fill-gray-700 ease-in-out duration-200;
+}
+
+.experience-row .experience-card {
+  @apply relative w-full px-4 py-4 ml-4 md:ml-8 rounded-xl flex flex-col md:flex-row md:items-start items-start md:gap-4 gap-2 ease-in-out duration-200;
+}
+
+.experience-card:hover .experience-date {
+  @apply bg-theme-white ease-in-out duration-200;
+}
+
+.achievement-img {
+  @apply grayscale-[0.75] hover:grayscale-0 ease-in-out duration-300;
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  @apply w-0 md:w-[3px];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-300;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-theme-black;
+}
+
+/* Dark Mode support */
+.dark * {
+  @apply text-theme-white transition-colors duration-200;
+}
+
+.dark button * {
+  @apply text-theme-black;
+}
+
+.dark .project-card * {
+  @apply text-theme-white;
+}
+
+.dark .project-card:hover * {
+  @apply text-theme-black;
+}
+
+
+.dark .experience-card * {
+  @apply text-theme-white;
+}
+
+.dark .experience-card:hover * {
+  @apply text-theme-black;
+}
+
+.dark .experience-card:hover .experience-date * {
+  @apply text-theme-white !important;
+}
+
+.dark svg {
+  @apply fill-theme-white;
+}
+
+.dark .footer svg,
+.dark .project-card svg,
+.dark .experience-card svg,
+.dark button svg {
+  @apply fill-theme-black;
+}
+
+.dark .navbar_glass {
+  @apply bg-[#121212] bg-opacity-30 border-b border-zinc-800/50 shadow-[0_1px_8px_rgba(0,0,0,0.2)];
+}
+
+.dark .dropdown_menu {
+  @apply bg-[#1a1a1a] border-zinc-800 shadow-[0_4px_25px_rgba(0,0,0,0.3)];
+}
+
+.dark .dropdown_link {
+  @apply text-theme-white;
+}
+
+.dark .hero_social_icon {
+  @apply fill-theme-white hover:fill-gray-300;
+}
+
+.dark .experience-card:hover .experience-date {
+  @apply bg-[#121212] !important;
+}
+
+.dark .footer {
+  @apply border-zinc-800 shadow-2xl;
+}
+

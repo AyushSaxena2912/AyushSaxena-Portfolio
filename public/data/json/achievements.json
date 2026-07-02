@@ -1,0 +1,89 @@
+{
+  "achievement": [
+    {
+      "id": 1,
+      "title": "Certificate",
+      "type": "graphic",
+      "description": "Notes-Era Bootcamps",
+      "image": "/data/images/certificate.png"
+    },
+    {
+      "id": 2,
+      "title": "Aharnidhi Poster",
+      "type": "graphic",
+      "description": "Food Donation Drive",
+      "image": "/data/images/poster_aharnidhi.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Vidhyanjali Poster",
+      "type": "graphic",
+      "description": "Book Donation Drive",
+      "image": "/data/images/poster_vidhyanjali.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Launch Banner",
+      "type": "graphic",
+      "description": "Notes-Era Rebooted",
+      "image": "/data/images/banner_notesera_reboot.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Interview Module",
+      "type": "graphic",
+      "description": "UI/UX Questions Cover",
+      "image": "/data/images/graphic_notesera_uiux.png"
+    },
+    {
+      "id": 6,
+      "title": "Hiring Flyer",
+      "type": "graphic",
+      "description": "Medoc Health IT",
+      "image": "/data/images/graphic_medoc_hiring.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Brand Identity",
+      "type": "graphic",
+      "description": "Notes-Era Logo Design",
+      "image": "/data/images/graphic_notesera_logo.png"
+    },
+
+    {
+      "id": 9,
+      "title": "Carousel Cover",
+      "type": "graphic",
+      "description": "Causes of Failure",
+      "image": "/data/images/graphic_failure_cause.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Q Paths Logo",
+      "type": "graphic",
+      "description": "Brand Logo Design",
+      "image": "/data/images/graphic_qpaths_logo.png"
+    },
+    {
+      "id": 11,
+      "title": "Moonstone Flyers",
+      "type": "graphic",
+      "description": "Event Marketing Poster",
+      "image": "/data/images/graphic_moonstone_posters.png"
+    },
+    {
+      "id": 12,
+      "title": "Squid Game 2.0",
+      "type": "graphic",
+      "description": "Campus Event Poster",
+      "image": "/data/images/graphic_squid_game.png"
+    },
+    {
+      "id": 13,
+      "title": "Student Reviews",
+      "type": "graphic",
+      "description": "Notes-Era Testimonials",
+      "image": "/data/images/graphic_notesera_reviews.png"
+    }
+  ]
+}

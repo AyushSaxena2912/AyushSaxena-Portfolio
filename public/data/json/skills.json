@@ -1,0 +1,147 @@
+{
+  "categories": [
+    {
+      "title": "Programming Languages",
+      "skills": [
+        {
+          "name": "JavaScript (ES6+)",
+          "icons": ["https://skillicons.dev/icons?i=js&theme=dark"]
+        },
+        {
+          "name": "TypeScript",
+          "icons": ["https://skillicons.dev/icons?i=ts&theme=dark"]
+        },
+        {
+          "name": "Java",
+          "icons": ["https://skillicons.dev/icons?i=java&theme=dark"]
+        },
+        {
+          "name": "C++",
+          "icons": ["https://skillicons.dev/icons?i=cpp&theme=dark"]
+        }
+      ]
+    },
+    {
+      "title": "Frameworks & Libraries",
+      "skills": [
+        {
+          "name": "ReactJS",
+          "icons": ["https://skillicons.dev/icons?i=react&theme=dark"]
+        },
+        {
+          "name": "Node.js",
+          "icons": ["https://skillicons.dev/icons?i=nodejs&theme=dark"]
+        },
+        {
+          "name": "Express.js",
+          "icons": ["https://skillicons.dev/icons?i=express&theme=dark"]
+        },
+        {
+          "name": "Prisma ORM",
+          "icons": ["https://skillicons.dev/icons?i=prisma&theme=dark"]
+        },
+        {
+          "name": "Tailwind CSS",
+          "icons": ["https://skillicons.dev/icons?i=tailwind&theme=dark"]
+        }
+      ]
+    },
+    {
+      "title": "Databases",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "icons": ["https://skillicons.dev/icons?i=postgres&theme=dark"]
+        },
+        {
+          "name": "MySQL",
+          "icons": ["https://skillicons.dev/icons?i=mysql&theme=dark"]
+        },
+        {
+          "name": "MongoDB",
+          "icons": ["https://skillicons.dev/icons?i=mongodb&theme=dark"]
+        }
+      ]
+    },
+    {
+      "title": "Caching & Realtime",
+      "skills": [
+        {
+          "name": "Redis",
+          "icons": ["https://skillicons.dev/icons?i=redis&theme=dark"]
+        },
+        {
+          "name": "WebSockets (Socket.io)",
+          "icons": ["/data/icons/socketio.svg"]
+        },
+        {
+          "name": "Server-Sent Events (SSE)",
+          "icons": ["/data/icons/sse.svg"]
+        }
+      ]
+    },
+    {
+      "title": "Cloud & Deployment",
+      "skills": [
+        {
+          "name": "AWS",
+          "icons": ["https://skillicons.dev/icons?i=aws&theme=dark"]
+        },
+        {
+          "name": "Cloudflare",
+          "icons": ["https://skillicons.dev/icons?i=cloudflare&theme=dark"]
+        },
+        {
+          "name": "Docker",
+          "icons": ["https://skillicons.dev/icons?i=docker&theme=dark"]
+        }
+      ]
+    },
+    {
+      "title": "Developer Tools",
+      "skills": [
+        {
+          "name": "Git",
+          "icons": ["https://skillicons.dev/icons?i=git&theme=dark"]
+        },
+        {
+          "name": "GitHub",
+          "icons": ["https://skillicons.dev/icons?i=github&theme=dark"]
+        },
+        {
+          "name": "CI/CD (GitHub Actions)",
+          "icons": ["https://skillicons.dev/icons?i=githubactions&theme=dark"]
+        },
+        {
+          "name": "Postman",
+          "icons": ["https://skillicons.dev/icons?i=postman&theme=dark"]
+        },
+        {
+          "name": "Swagger",
+          "icons": ["/data/icons/swagger.svg"]
+        }
+      ]
+    },
+    {
+      "title": "Design Tools",
+      "skills": [
+        {
+          "name": "Figma",
+          "icons": ["https://skillicons.dev/icons?i=figma&theme=dark"]
+        },
+        {
+          "name": "Adobe XD",
+          "icons": ["https://skillicons.dev/icons?i=xd&theme=dark"]
+        },
+        {
+          "name": "Framer",
+          "icons": ["/data/icons/framer.svg"]
+        },
+        {
+          "name": "Canva",
+          "icons": ["/data/icons/canva.svg"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "social": [
+        {
+            "id": 1,
+            "name": "github",
+            "username": "AyushSaxena2912",
+            "link": "https://github.com/AyushSaxena2912"
+        },
+        {
+            "id": 2,
+            "name": "linkedin",
+            "username": "Ayush Saxena",
+            "link": "https://www.linkedin.com/in/ayushsaxena29"
+        },
+        {
+            "id": 3,
+            "name": "phone",
+            "username": "+91-9111869645",
+            "link": "tel:+91-9111869645"
+        },
+        {
+            "id": 4,
+            "name": "mail",
+            "username": "ayushofficial2912@gmail.com",
+            "link": "mailto:ayushofficial2912@gmail.com"
+        }
+    ]
+}

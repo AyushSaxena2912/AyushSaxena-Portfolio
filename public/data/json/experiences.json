@@ -1,0 +1,90 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "companyName": "SPEGI Technologies Pvt. Ltd.",
+      "companyLogo": "/data/images/spegi_logo.png",
+      "designation": "Software Developer",
+      "location": "Remote",
+      "startDate": "Sep 2025",
+      "endDate": "Present",
+      "companyLink": "",
+      "description": [
+        "Developed a multi-tenant livestock management SaaS platform by designing 200+ Figma screens and building RESTful APIs using Node.js, Express.js, PostgreSQL, and Prisma ORM, digitizing 70%+ of farm operations across livestock, health, breeding, feed, cost, employee management, and multilingual user experiences.",
+        "Implemented RBAC, search, filtering, sorting, pagination, transaction-safe workflows with Prisma ORM ($transaction), and push notifications using Node-Cron and Firebase Cloud Messaging (FCM).",
+        "Containerized and deployed backend services on AWS (EC2, RDS, S3) using Docker and Docker Compose, automated via a GitHub Actions CI/CD pipeline."
+      ],
+      "skills": [
+        "https://skillicons.dev/icons?i=figma",
+        "https://skillicons.dev/icons?i=nodejs",
+        "https://skillicons.dev/icons?i=express",
+        "https://skillicons.dev/icons?i=postgres",
+        "https://skillicons.dev/icons?i=prisma",
+        "https://skillicons.dev/icons?i=docker",
+        "https://skillicons.dev/icons?i=aws",
+        "https://skillicons.dev/icons?i=githubactions",
+        "https://skillicons.dev/icons?i=firebase"
+      ],
+      "type": "Freelance",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "companyName": "BodhyaMarg – Smart School ERP Platform",
+      "companyLogo": "/data/icons/project_default.svg",
+      "designation": "UI/UX Designer",
+      "location": "Remote",
+      "startDate": "Mar 2025",
+      "endDate": "Present",
+      "companyLink": "",
+      "description": [
+        "Designed end-to-end UI/UX for a Smart School ERP Platform, covering 7+ modules including academics, fee payments, hostel services, transportation tracking, assessments, and timetable management for a Student & Parent Portal."
+      ],
+      "skills": [
+        "https://skillicons.dev/icons?i=figma"
+      ],
+      "type": "Freelance",
+      "favorite": true
+    },
+    {
+      "id": 3,
+      "companyName": "Medoc HealthCare IT Private Limited",
+      "companyLogo": "/data/images/medoc_logo.png",
+      "designation": "UI/UX Design Intern",
+      "location": "Remote",
+      "startDate": "Jan 2025",
+      "endDate": "Apr 2025",
+      "companyLink": "",
+      "description": [
+        "Revamped the UI/UX of a hyperlocal quick-commerce platform enabling users to discover 50+ trusted shops, explore live discounts, and purchase products with doorstep delivery.",
+        "Optimized interfaces for multi-store operations, order management, staff handling, bargaining systems, and sales analytics workflows, reducing task completion time by 30%."
+      ],
+      "skills": [
+        "https://skillicons.dev/icons?i=figma"
+      ],
+      "type": "Internship",
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "companyName": "Medi-Caps Innovation and Incubation (MII) Foundation",
+      "companyLogo": "/data/images/mii_logo.png",
+      "designation": "Software Developer Intern",
+      "location": "Indore",
+      "startDate": "Jun 2024",
+      "endDate": "Jul 2024",
+      "companyLink": "",
+      "description": [
+        "Constructed the backend of an Applicant Tracking System (ATS) using Node.js, Express.js, and MongoDB supporting 1,000+ candidate records.",
+        "Architected 15+ RESTful APIs and role-based authentication for managing recruitment workflows and secure data handling."
+      ],
+      "skills": [
+        "https://skillicons.dev/icons?i=nodejs",
+        "https://skillicons.dev/icons?i=express",
+        "https://skillicons.dev/icons?i=mongodb"
+      ],
+      "type": "Internship",
+      "favorite": true
+    }
+  ]
+}
