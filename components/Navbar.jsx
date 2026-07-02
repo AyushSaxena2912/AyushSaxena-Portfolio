@@ -26,7 +26,12 @@ const Navbar = () => {
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem("theme");
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem("theme");
+    } catch (e) {
+      console.warn("localStorage is not accessible:", e);
+    }
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setIsDark(true);
@@ -39,14 +44,18 @@ const Navbar = () => {
 
   const toggleTheme = (e) => {
     e.stopPropagation();
-    if (isDark) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setIsDark(false);
-    } else {
+    const nextDark = !isDark;
+    setIsDark(nextDark);
+    if (nextDark) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDark(true);
+      try {
+        localStorage.setItem("theme", "dark");
+      } catch (err) {}
+    } else {
+      document.documentElement.classList.remove("dark");
+      try {
+        localStorage.setItem("theme", "light");
+      } catch (err) {}
     }
   };
 
