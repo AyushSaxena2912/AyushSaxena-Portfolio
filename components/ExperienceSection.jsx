@@ -21,7 +21,7 @@ const ExperienceSection = (props) => {
               Freelance Work Experience
             </h2>
             <div className="relative flex flex-col gap-10">
-              <div className="absolute border-l-2 border-dashed border-gray-400 dark:border-zinc-700 left-0 h-full"></div>
+              <div className="absolute border-l-2 border-dashed border-gray-400 dark:border-zinc-700 left-[14px] md:left-[16px] h-full"></div>
               {freelance.map((item, index) => (
                 <ExperienceCard
                   key={item.id}
@@ -39,7 +39,7 @@ const ExperienceSection = (props) => {
               Internships
             </h2>
             <div className="relative flex flex-col gap-10">
-              <div className="absolute border-l-2 border-dashed border-gray-400 dark:border-zinc-700 left-0 h-full"></div>
+              <div className="absolute border-l-2 border-dashed border-gray-400 dark:border-zinc-700 left-[14px] md:left-[16px] h-full"></div>
               {internships.map((item, index) => (
                 <ExperienceCard
                   key={item.id}

@@ -48,15 +48,15 @@ const ExperienceCard = ({ item, color = "blue" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex relative items-start experience-row w-full">
+    <div className="flex relative items-start experience-row w-full pl-8 md:pl-10">
       {/* Timeline dot */}
       <div
-        className={`w-[20px] h-[20px] absolute left-[-9px] top-[18px] rounded-full border-2 ${theme.bg} ${theme.border} z-10 experience-circle`}
+        className={`w-[20px] h-[20px] absolute left-[4px] md:left-[6px] top-[18px] rounded-full border-2 ${theme.bg} ${theme.border} z-10 experience-circle`}
       />
 
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className={`relative w-full ml-4 md:ml-8 rounded-xl border-2 ${theme.border} bg-theme-white ${theme.hoverBg} ease-in-out duration-200 cursor-pointer`}
+        className={`relative flex-1 rounded-xl border-2 ${theme.border} bg-theme-white ${theme.hoverBg} ease-in-out duration-200 cursor-pointer`}
       >
         {/* Date Badge - Absolute positioned on top border to save space */}
         <div
@@ -85,7 +85,7 @@ const ExperienceCard = ({ item, color = "blue" }) => {
           {/* Company details */}
           <div className="w-full flex-1 min-w-0 pr-2">
             {companyLink ? (
-              <h3 className="text-base md:text-lg font-bold underline truncate">
+              <h3 className="text-base md:text-lg font-bold underline whitespace-normal break-words">
                 <Link
                   target="_blank"
                   href={companyLink}
@@ -95,7 +95,7 @@ const ExperienceCard = ({ item, color = "blue" }) => {
                 </Link>
               </h3>
             ) : (
-              <h3 className="text-base md:text-lg font-bold truncate">
+              <h3 className="text-base md:text-lg font-bold whitespace-normal break-words">
                 {companyName}
               </h3>
             )}
