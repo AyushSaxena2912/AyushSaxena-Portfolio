@@ -1,12 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Common Classes */
-* {
-  @apply font-roboto tracking-wide text-theme-black;
+html, body {
+  font-family: var(--font-roboto), monospace;
+  @apply tracking-wide text-theme-black;
+}
+
+h1, h2, h3, h4, h5, h6, input, button, textarea, select {
+  font-family: var(--font-roboto), monospace;
+}
+
+/* Inherit font for inputs & buttons */
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Hide NextUI provider's injected hidden input */
+body > input[type="hidden"],
+#__NEXT_DATA__,
+[data-nextui-safe-anchor] {
+  display: none !important;
 }
 
 .container {
@@ -29,7 +48,15 @@
 }
 
 .navbar_glass {
-  @apply bg-theme-white shadow-sm bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-[5px];
+  background-color: rgba(245, 247, 248, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(228, 228, 231, 0.2);
+}
+
+.dark .navbar_glass {
+  background-color: rgba(24, 24, 27, 0.75);
+  border-bottom: 1px solid rgba(63, 63, 70, 0.3);
 }
 
 .navbar_link {

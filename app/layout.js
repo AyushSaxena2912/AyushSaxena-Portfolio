@@ -1,10 +1,17 @@
 import "./globals.css";
+import { Roboto_Mono } from "next/font/google";
 
 import { Navbar, Footer } from "@/components/Export";
 import ReduxProvider from "@/redux/ReduxProvider";
 
 import NextUI from "@/components/NextUI";
 import { Toaster } from "react-hot-toast";
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Ayush Saxena",
@@ -19,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ReduxProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" className={robotoMono.variable} suppressHydrationWarning>
         <body className="bg-theme-white min-h-screen transition-colors duration-300">
           <Toaster position="top-center" />
           <NextUI>

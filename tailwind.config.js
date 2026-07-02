@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["Roboto Mono", "monospace"],
+        roboto: ["var(--font-roboto)", "monospace"],
       },
       colors: {
         "theme-black": "#212529",

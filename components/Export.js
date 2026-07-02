@@ -21,6 +21,7 @@ import BadgeSection from "./BadgeSection";
 import BadgeCard from "./BadgeCard";
 import Footer from "./Footer";
 import CollapsibleSection from "./CollapsibleSection";
+import EducationSection from "./EducationSection";
 
 export {
   Navbar,
@@ -46,4 +47,5 @@ export {
   BadgeCard,
   Footer,
   CollapsibleSection,
+  EducationSection,
 };

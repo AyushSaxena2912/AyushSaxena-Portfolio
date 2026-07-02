@@ -7,27 +7,27 @@ const colorMap = {
   blue: {
     border: "border-theme-blue",
     bg: "bg-theme-blue",
-    hoverBg: "hover:bg-theme-blue",
+    hoverBg: "hover:bg-theme-blue/80",
   },
   purple: {
     border: "border-theme-purple",
     bg: "bg-theme-purple",
-    hoverBg: "hover:bg-theme-purple",
+    hoverBg: "hover:bg-theme-purple/80",
   },
   yellow: {
     border: "border-theme-yellow",
     bg: "bg-theme-yellow",
-    hoverBg: "hover:bg-theme-yellow",
+    hoverBg: "hover:bg-theme-yellow/80",
   },
   green: {
     border: "border-theme-green",
     bg: "bg-theme-green",
-    hoverBg: "hover:bg-theme-green",
+    hoverBg: "hover:bg-theme-green/80",
   },
   pink: {
     border: "border-theme-pink",
     bg: "bg-theme-pink",
-    hoverBg: "hover:bg-theme-pink",
+    hoverBg: "hover:bg-theme-pink/80",
   },
 };
 

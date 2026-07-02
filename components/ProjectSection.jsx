@@ -9,7 +9,9 @@ const ProjectSection = (props) => {
       title="Personal Projects"
       subtitle="Explore my diverse projects showcasing various technologies, built to validate my understanding of the technologies I've learned."
     >
-      <div>
+      <div className="relative flex flex-col gap-10">
+        {/* Timeline vertical line */}
+        <div className="absolute border-l-2 border-dashed border-gray-400 dark:border-zinc-700 left-[14px] md:left-[16px] h-full" />
         {data.map((item, index) => {
           const colors = ["yellow", "purple", "blue", "green"];
           return (

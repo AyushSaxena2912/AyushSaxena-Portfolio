@@ -1,0 +1,15 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "companyName": "Medi-Caps University",
+      "companyLogo": "/data/images/mii_logo.png",
+      "designation": "B.Tech in Computer Science (Artificial Intelligence)",
+      "location": "Indore, India",
+      "startDate": "2021",
+      "endDate": "2025",
+      "companyLink": "https://medicaps.ac.in",
+      "description": []
+    }
+  ]
+}

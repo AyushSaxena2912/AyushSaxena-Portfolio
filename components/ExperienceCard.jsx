@@ -8,25 +8,25 @@ const colorMap = {
   blue: {
     border: "border-theme-blue",
     bg: "bg-theme-blue",
-    hoverBg: "hover:bg-theme-blue",
+    hoverBg: "hover:bg-theme-blue/60",
     headerBg: "bg-theme-blue/10",
   },
   purple: {
     border: "border-theme-purple",
     bg: "bg-theme-purple",
-    hoverBg: "hover:bg-theme-purple",
+    hoverBg: "hover:bg-theme-purple/60",
     headerBg: "bg-theme-purple/10",
   },
   yellow: {
     border: "border-theme-yellow",
     bg: "bg-theme-yellow",
-    hoverBg: "hover:bg-theme-yellow",
+    hoverBg: "hover:bg-theme-yellow/60",
     headerBg: "bg-theme-yellow/10",
   },
   green: {
     border: "border-theme-green",
     bg: "bg-theme-green",
-    hoverBg: "hover:bg-theme-green",
+    hoverBg: "hover:bg-theme-green/60",
     headerBg: "bg-theme-green/10",
   },
 };
@@ -46,6 +46,7 @@ const ExperienceCard = ({ item, color = "blue" }) => {
 
   const theme = colorMap[color] || colorMap.blue;
   const [isOpen, setIsOpen] = useState(false);
+  const isCollapsible = (description && description.length > 0) || (skills && skills.length > 0);
 
   return (
     <div className="flex relative items-start experience-row w-full pl-8 md:pl-10">
@@ -55,8 +56,8 @@ const ExperienceCard = ({ item, color = "blue" }) => {
       />
 
       <div
-        onClick={() => setIsOpen((prev) => !prev)}
-        className={`relative flex-1 rounded-xl border-2 ${theme.border} bg-theme-white ${theme.hoverBg} ease-in-out duration-200 cursor-pointer`}
+        onClick={isCollapsible ? () => setIsOpen((prev) => !prev) : undefined}
+        className={`relative flex-1 rounded-xl border-2 ${theme.border} bg-theme-white ${theme.hoverBg} ease-in-out duration-200 ${isCollapsible ? "cursor-pointer" : "cursor-default"}`}
       >
         {/* Date Badge - Absolute positioned on top border to save space */}
         <div
@@ -69,7 +70,7 @@ const ExperienceCard = ({ item, color = "blue" }) => {
         </div>
 
         {/* Card Header Content */}
-        <div className="flex items-start gap-3 p-4 pr-10 relative">
+        <div className={`flex items-start gap-3 p-4 relative ${isCollapsible ? "pr-10" : ""}`}>
           {/* Logo */}
           <div className="flex items-start shrink-0 pt-1">
             <Image
@@ -106,54 +107,57 @@ const ExperienceCard = ({ item, color = "blue" }) => {
           </div>
 
           {/* Chevron icon - absolute positioned at right-4 */}
-          <div className="absolute right-4 top-[24px]">
-            <FaChevronDown
-              className={`text-sm transition-transform duration-300 ${
-                isOpen ? "rotate-180" : "rotate-0"
-              }`}
-            />
-          </div>
+          {isCollapsible && (
+            <div className="absolute right-4 top-[24px]">
+              <FaChevronDown
+                className={`text-sm transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+                  }`}
+              />
+            </div>
+          )}
         </div>
 
         {/* Collapsible content */}
-        <div
-          style={{
-            maxHeight: isOpen ? "1000px" : "0px",
-            opacity: isOpen ? 1 : 0,
-            overflow: "hidden",
-            transition: "max-height 0.4s ease, opacity 0.3s ease",
-          }}
-        >
-          <div className="px-4 pb-4 border-t border-zinc-100 dark:border-zinc-800/30 pt-3">
-            {description && description.length > 0 && (
-              <ul className="list-disc pl-4 flex flex-col gap-1 mb-3">
-                {description.map((point, index) => (
-                  <li
-                    key={index}
-                    className="text-xs md:text-sm tracking-normal leading-relaxed"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {skills && (
-              <div className="flex flex-wrap gap-[6px] mt-2">
-                {skills.map((skill, idx) => (
-                  <Image
-                    key={idx}
-                    src={skill}
-                    width={25}
-                    height={25}
-                    alt="skill"
-                    className="w-[25px] h-[25px] object-contain"
-                    unoptimized
-                  />
-                ))}
-              </div>
-            )}
+        {isCollapsible && (
+          <div
+            style={{
+              maxHeight: isOpen ? "1000px" : "0px",
+              opacity: isOpen ? 1 : 0,
+              overflow: "hidden",
+              transition: "max-height 0.4s ease, opacity 0.3s ease",
+            }}
+          >
+            <div className="px-4 pb-4 border-t border-zinc-100 dark:border-zinc-800/30 pt-3">
+              {description && description.length > 0 && (
+                <ul className="list-disc pl-4 flex flex-col gap-1 mb-3">
+                  {description.map((point, index) => (
+                    <li
+                      key={index}
+                      className="text-xs md:text-sm tracking-normal leading-relaxed"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {skills && (
+                <div className="flex flex-wrap gap-[6px] mt-2">
+                  {skills.map((skill, idx) => (
+                    <Image
+                      key={idx}
+                      src={skill}
+                      width={25}
+                      height={25}
+                      alt="skill"
+                      className="w-[25px] h-[25px] object-contain"
+                      unoptimized
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

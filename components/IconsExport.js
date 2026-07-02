@@ -7,7 +7,7 @@ import {
   FaPhone,
   FaChevronDown,
 } from "react-icons/fa6";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaMapMarkerAlt } from "react-icons/fa";
 
 export {
   FaGithub,
@@ -18,4 +18,5 @@ export {
   FaLongArrowAltRight,
   FaPhone,
   FaChevronDown,
+  FaMapMarkerAlt,
 };
