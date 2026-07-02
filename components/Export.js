@@ -20,6 +20,7 @@ import ContactSection from "./ContactSection";
 import BadgeSection from "./BadgeSection";
 import BadgeCard from "./BadgeCard";
 import Footer from "./Footer";
+import CollapsibleSection from "./CollapsibleSection";
 
 export {
   Navbar,
@@ -44,4 +45,5 @@ export {
   BadgeSection,
   BadgeCard,
   Footer,
+  CollapsibleSection,
 };

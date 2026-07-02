@@ -45,7 +45,7 @@ const Hero = () => {
             priority
           />
           <Image
-            src={"/data/images/avatar_vector.png"}
+            src={"/data/images/avatar_vector_v2.png"}
             width={150}
             height={150}
             alt="avatar image"

@@ -20,8 +20,7 @@ const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [showNav, setShowNav] = useState(false);
-  const [toggleDropdownMenu, setToggleDropdownMenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -38,7 +37,8 @@ const Navbar = () => {
     }
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = (e) => {
+    e.stopPropagation();
     if (isDark) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
@@ -50,12 +50,8 @@ const Navbar = () => {
     }
   };
 
-  const handleDropdownMenu = () => {
-    setShowNav(false);
-    setToggleDropdownMenu(!toggleDropdownMenu);
-  };
-
   const handleHomePageNavigation = () => {
+    setIsMenuOpen(false);
     if (pathname !== ENUM.HOME) {
       router.push(ENUM.HOME);
     }
@@ -79,7 +75,7 @@ const Navbar = () => {
         />
         <Image
           onClick={() => dispatch(changeAvatarState())}
-          src={"/data/images/avatar_vector.png"}
+          src={"/data/images/avatar_vector_v2.png"}
           width={50}
           height={50}
           alt="avatar"
@@ -135,44 +131,38 @@ const Navbar = () => {
         </button>
 
         <div className="sm:hidden flex relative">
-          <div
-            className="flex"
-            onClick={() => setToggleDropdownMenu(!toggleDropdownMenu)}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="cursor-pointer w-[45px] h-[45px] flex flex-col justify-center items-center gap-1.5"
+            aria-label="Toggle Menu"
           >
-            <button
-              type="button"
-              onClick={() => setShowNav(!showNav)}
-              className="cursor-pointer w-[45px] h-[45px]"
-            >
-              <div
-                className={`w-[30px] h-[1px] transition ease-in duration-150 bg-theme-black dark:bg-white ${
-                  showNav
-                    ? "rotate-45 mb-1  translate-y-[1px]"
-                    : "rotate-0 mb-2"
-                } `}
-              ></div>
-              <div
-                className={`w-[30px] h-[1px] transition ease-in duration-150 bg-theme-black dark:bg-white ${
-                  showNav ? "-rotate-45 mb-0 -translate-y-[3px]" : "rotate-0"
-                }`}
-              ></div>
-            </button>
+            <div
+              className={`w-[30px] h-[2px] transition-all duration-300 bg-theme-black dark:bg-white ${
+                isMenuOpen ? "rotate-45 translate-y-[4px]" : ""
+              }`}
+            ></div>
+            <div
+              className={`w-[30px] h-[2px] transition-all duration-300 bg-theme-black dark:bg-white ${
+                isMenuOpen ? "-rotate-45 -translate-y-[4px]" : ""
+              }`}
+            ></div>
+          </button>
 
-            {toggleDropdownMenu && (
-              <div className="ease-in-out duration-300 dropdown_menu">
-                {NavData?.map((item) => (
-                  <Link
-                    key={item.route}
-                    href={item.route}
-                    className="dropdown_link"
-                    onClick={handleDropdownMenu}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          {isMenuOpen && (
+            <div className="ease-in-out duration-300 dropdown_menu">
+              {NavData?.map((item) => (
+                <Link
+                  key={item.route}
+                  href={item.route}
+                  className="dropdown_link"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
         <ul className="hidden sm:flex gap-5 font-medium ">
           {NavData?.map((item) => (

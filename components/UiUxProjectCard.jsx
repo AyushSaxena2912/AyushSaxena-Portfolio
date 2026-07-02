@@ -43,11 +43,11 @@ const UiUxProjectCard = ({ item, color = "blue" }) => {
       className={`w-full bg-theme-white dark:bg-[#1a1a1a] border-2 ${theme.border} ${theme.hoverBg} rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 flex flex-col group project-card`}
     >
       {image ? (
-        <div className="w-full relative overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 flex items-center justify-center shrink-0">
+        <div className="w-full h-[220px] relative overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80 shrink-0">
           <img
             src={image}
             alt={`${name} mockup`}
-            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       ) : null}
