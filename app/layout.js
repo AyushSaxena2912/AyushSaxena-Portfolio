@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <ReduxProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className="bg-theme-white dark:bg-[#121212] min-h-screen transition-colors duration-300">
+        <body className="bg-theme-white min-h-screen transition-colors duration-300">
           <Toaster position="top-center" />
           <NextUI>
             <Navbar />

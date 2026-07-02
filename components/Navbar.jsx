@@ -21,43 +21,13 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    let savedTheme = null;
+    document.documentElement.classList.remove("dark");
     try {
-      savedTheme = localStorage.getItem("theme");
-    } catch (e) {
-      console.warn("localStorage is not accessible:", e);
-    }
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-    }
+      localStorage.removeItem("theme");
+    } catch (e) {}
   }, []);
-
-  const toggleTheme = (e) => {
-    e.stopPropagation();
-    const nextDark = !isDark;
-    setIsDark(nextDark);
-    if (nextDark) {
-      document.documentElement.classList.add("dark");
-      try {
-        localStorage.setItem("theme", "dark");
-      } catch (err) {}
-    } else {
-      document.documentElement.classList.remove("dark");
-      try {
-        localStorage.setItem("theme", "light");
-      } catch (err) {}
-    }
-  };
 
   const handleHomePageNavigation = () => {
     setIsMenuOpen(false);
@@ -97,47 +67,6 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="flex items-center gap-4">
-        {/* Theme Toggle Button */}
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-xl bg-theme-white dark:bg-zinc-800 hover:scale-110 active:scale-95 transition-all shadow-sm border border-zinc-200 dark:border-zinc-700"
-          aria-label="Toggle Theme"
-        >
-          {!mounted ? (
-            <div className="w-[18px] h-[18px]" />
-          ) : isDark ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eab308"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ fill: 'none' }}
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#4b5563"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ fill: 'none' }}
-            >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-          )}
-        </button>
 
         <div className="sm:hidden flex relative">
           <button
